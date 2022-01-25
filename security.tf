@@ -1,3 +1,4 @@
+#Security group for the public subnet.  
 resource "aws_security_group" "front_security_group" {
   vpc_id = aws_vpc.main.id
 
@@ -26,6 +27,7 @@ resource "aws_security_group" "front_security_group" {
   }
 }
 
+#security group for middle subnet
 resource "aws_security_group" "middle_security_group" {
   vpc_id      = aws_vpc.main.id
 
@@ -63,6 +65,7 @@ resource "aws_security_group" "middle_security_group" {
   }
 }
 
+#Security group for back line subnet
 resource "aws_security_group" "back_security_group" {
   vpc_id      = aws_vpc.main.id
 

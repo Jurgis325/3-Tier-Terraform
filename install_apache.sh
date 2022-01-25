@@ -1,3 +1,5 @@
+#Script to help test if the jumpbox is correctly configured or not
+#It'll display the host name for anyone who connects over port 80
 #!/bin/bash
 
 yum update -y

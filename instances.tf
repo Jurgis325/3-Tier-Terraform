@@ -1,3 +1,4 @@
+#Grab latest ami image for AWS linux 2
 data "aws_ami" "amazon-linux-2" {
   most_recent = true
 
@@ -8,7 +9,7 @@ data "aws_ami" "amazon-linux-2" {
   owners = ["amazon"]
 }
 
-
+#create instance to be test jump box
 resource "aws_instance" "bastion" {
   ami           = "${data.aws_ami.amazon-linux-2.id}"
   instance_type = "t2.micro"
@@ -23,6 +24,7 @@ resource "aws_instance" "bastion" {
   }
 }
 
+#create middle instance to test ssh
 resource "aws_instance" "app" {
   ami           = "${data.aws_ami.amazon-linux-2.id}"
   instance_type = "t2.micro"
