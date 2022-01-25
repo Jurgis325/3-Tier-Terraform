@@ -7,4 +7,4 @@ Each security group allows SSH from the subnet it sits behind.
 Instance terraform file has a couple of instances used to test the setup.
 
 Can use the following command to SSH into the instance without agent forwarding.
-ssh -i "demokey.pem" -o "ProxyCommand ssh -W %h:%p -i "demokey.pem" [JUMPBOX LOGIN]" *PRIVATE INSTANCE*
+ssh -i "demokey.pem" -o "ProxyCommand ssh -W %h:%p -i "demokey.pem" [JUMPBOX LOGIN]" [PRIVATE INSTANCE]
